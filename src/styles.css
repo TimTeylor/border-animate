@@ -1,4 +1,63 @@
+body {
+  background-color: #191919;
+  color: white;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
+  margin: 0 auto;
+}
+
+.card-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.card {
+  height: 200px;
+  width: 200px;
+  box-shadow: 16px 14px 20px #0000008c;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card::before {
+  content: "";
+  background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  animation: rotate 5s linear infinite;
+}
+.card::after {
+  content: "";
+  width: 190px;
+  height: 190px;
+  background-color: #101010;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 20px 20px 20px #0000008c;
+}
+.card p {
+  font-size: larger;
+  color: #ff0052;
+  z-index: 1;
+  letter-spacing: 5px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }

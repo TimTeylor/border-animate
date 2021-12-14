@@ -1,10 +1,15 @@
 import "./styles.css";
-import Button from "./components/UI/Button";
+import Card from "./components/UI/Card";
 
 export default function App() {
   return (
     <div className="App">
-      <Button />
+      <h1>Animated border</h1>
+      <div className="card-list">
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 }
